@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-Tailscore - A minimal _s, Tailwind, Parcel & Browsersync Wordpress Theme
+Tailscore - A minimal _s (Underscores), Tailwind, Parcel & Browsersync Wordpress Theme
 ===
 
-This is the Underscores theme stripped down to a minimum, with [Tailwind](https://tailwindcss.com/) for CSS, [Parcel](https://parceljs.org/) to bundle it all and [Browsersync](https://browsersync.io/) used for development.
+This is the [Underscores](https://underscores.me/) theme stripped down to a minimum, with [Tailwind](https://tailwindcss.com/) for CSS, [Parcel](https://parceljs.org/) to bundle it all and [Browsersync](https://browsersync.io/) used for development.
 
 Nothing has been added asides from the above, jQuery has been removed entirely. 
 
