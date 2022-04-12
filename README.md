@@ -36,4 +36,5 @@ Use `yarn build` to prepare for deployment
 - Get rid of jQuery remnants from the theme.
 - Set up a decent production environment 
 - Set up CSS folders for importing section CSS with `@apply` used for classes to avoid utility class overload
+- Get rid of navigation.js default Underscores file
 
