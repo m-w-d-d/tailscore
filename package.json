@@ -19,9 +19,13 @@
     "url": "https://github.com/Automattic/_s/issues"
   },
   "devDependencies": {
-    
+    "autoprefixer": "^10.4.4",
+    "parcel": "^2.4.1",
+    "postcss": "^8.4.12",
+    "postcss-nested": "^5.0.6",
+    "tailwindcss": "^3.0.23"
   },
   "scripts": {
-   
+    
   }
 }
