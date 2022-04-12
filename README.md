@@ -28,7 +28,7 @@ Remember to change the url on the `watch` command of the package.json to your lo
 
 ## Usage
 
-Use 'yarn dev` for development
+Use `yarn dev` for development
 Use `yarn build` to prepare for deployment
 
 ## TODO
