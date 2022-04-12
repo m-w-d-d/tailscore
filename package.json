@@ -26,6 +26,7 @@
     "tailwindcss": "^3.0.23"
   },
   "scripts": {
-    
+    "build": "parcel build build/app.js",
+    "dev": "parcel watch build/app.js & browser-sync start --proxy 'http://tailscore-boilerplate.local' --files '**/*.php, dist/*.css, dist/*.js'"
   }
 }

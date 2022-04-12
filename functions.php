@@ -139,13 +139,17 @@ add_action( 'widgets_init', 'tailscore_widgets_init' );
  */
 function tailscore_scripts() {
 	wp_enqueue_style( 'tailscore-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'tailscore-style', 'rtl', 'replace' );
+	
 
 	wp_enqueue_script( 'tailscore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	global $ver_num; // define global variable for the version number
+	$ver_num = mt_rand(); // on each call/load of the style the $ver_num will get different value
+	wp_enqueue_style( 'css', get_template_directory_uri() . '/dist/app.css', array(), $ver_num, 'all');
+	wp_enqueue_script( 'js-main', get_template_directory_uri() . '/dist/dist.js', '', $ver_num, true );
 }
 add_action( 'wp_enqueue_scripts', 'tailscore_scripts' );
 
@@ -176,3 +180,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/** * Completely Remove jQuery From WordPress */
+function remove_jquery() {
+	if (!is_admin()) {
+			wp_deregister_script('jquery');
+			wp_register_script('jquery', false);
+	}
+}
+add_action('init', 'remove_jquery');
